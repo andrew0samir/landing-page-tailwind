@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.background-dark{
+    @apply rounded-b-lg shadow-md bg-amber-400;
+
+}
+
+/* form  */
+.input-control{
+    @apply block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 
+    outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 
+    focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6
+}
+.label-control{
+    @apply block text-sm/6 font-medium text-gray-900 mt-3
+}
+
+/* main page */
+.light-bg{
+   @apply bg-linear-to-b from-blue-300 to-gray-200 text-black
+}
+.dark-bg{
+    @apply dark:bg-linear-to-b dark:from-blue-900 dark:to-gray-800 dark:text-white 
+}
+
+.f-row-c-lg{
+    @apply flex flex-col lg:flex-row justify-center items-center gap-[2rem] 
+}
+.f-c-lg{
+    @apply flex flex-col items-center justify-center 
+}
+.f-row-b-lg{
+    @apply flex flex-col lg:flex-row justify-between items-center gap-[2rem]
+}
+
+
+
